@@ -87,10 +87,14 @@ class ProductosController extends Controller
         $request->validate([
             'nombre' => 'required',
             'descripcion' => 'required',
-            'precio' => 'required|min:0',
+            'precio' => 'required|min:0'
         ]);
+        if ($request->hasFile('file-image')) {
+            $request->request->add(['imagen'=> $request->file('file-image')->store('public')]);
+        }
+
         Producto::where('id', $producto->id)
-            ->update($request->except('_method', '_token'));
+            ->update($request->except('_method', '_token','file-image'));
 
         return redirect()->route('productos.show', [$producto]);
     }

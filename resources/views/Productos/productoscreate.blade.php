@@ -48,7 +48,11 @@
         <input type="text" name="tamanio" id="nombre" value="{{ old('tamanio') ?? $producto->tamanio ?? '' }}" step="0.01"><br>
 
         <label for="imagen">Imagen:</label><br>
-        <input type="file" name="imagen" id="imagen" accept="image/*"><br>
+        <input type="file" name="file-image" id="imagen" accept="image/*"><br>
+
+        @if (isset($producto) and old('image') == null)
+            <img width="100px" src="{{Storage::url($producto->imagen)}}" alt=""><br>
+        @endif
 
         <input type="submit" value="Enviar">
 

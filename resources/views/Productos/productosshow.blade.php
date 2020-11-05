@@ -30,7 +30,7 @@
             <td>{{$producto->precio}}</td>
             <td>{{$producto->tipo}}</td>
             <td>{{$producto->tamanio}}</td>
-            <td>{{$producto->imagen}}</td>
+            <td><img width="100px" src="{{Storage::url($producto->imagen)}}" alt=" "></td>
         </tr>
     </table>
 </body>
