@@ -16,6 +16,7 @@
             <th>PRECIO</th>
             <th>TIPO</th>
             <th>TAMAÑO</th>
+            <th>IMAGEN</th>
         </tr>
         @foreach ($productos as $producto)
             <tr>
@@ -25,6 +26,7 @@
                 <td>{{$producto->precio}}</td>
                 <td>{{$producto->tipo}}</td>
                 <td>{{$producto->tamanio}}</td>
+                <td><img width="100px" src="{{Storage::url($producto->imagen)}}" alt=" "></td>
             </tr>
         @endforeach
     </table>

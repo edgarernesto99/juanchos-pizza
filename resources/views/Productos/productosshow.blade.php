@@ -21,6 +21,7 @@
             <th>PRECIO</th>
             <th>TIPO</th>
             <th>TAMAÑO</th>
+            <th>IMAGEN</th>
         </tr>
         <tr>
             <td>{{$producto->id}}</td>
@@ -29,6 +30,7 @@
             <td>{{$producto->precio}}</td>
             <td>{{$producto->tipo}}</td>
             <td>{{$producto->tamanio}}</td>
+            <td>{{$producto->imagen}}</td>
         </tr>
     </table>
 </body>

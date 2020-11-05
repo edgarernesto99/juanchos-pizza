@@ -40,9 +40,16 @@ class ProductosController extends Controller
             'nombre' => 'required',
             'descripcion' => 'required',
             'precio' => 'required|min:0',
+            'imagen' => 'required'
         ]);
-        Producto::create($request->all());
-
+        $producto = new Producto();
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->tipo = $request->tipo;
+        $producto->tamanio = $request->tamanio;
+        $producto->imagen = $request->file('imagen')->store('public');
+        $producto->save();
         return redirect('productos');
     }
 

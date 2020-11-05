@@ -18,10 +18,10 @@
     @endif
 
         @if(isset($producto))
-            <form action="{{ route('productos.update', [$producto]) }}" method="POST">
+            <form action="{{ route('productos.update', [$producto]) }}" method="POST" enctype="multipart/form-data">
             @method('patch')
         @else
-            <form action="{{ route('productos.store') }}" method="POST">
+            <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
         @endif
         @csrf
         <label for="nombre">Nombre:</label><br>
@@ -45,7 +45,10 @@
         </select><br>
 
         <label for="tamanio">Tamaño:</label><br>
-        <input type="text" name="tamanio" id="nombre"><br>
+        <input type="text" name="tamanio" id="nombre" value="{{ old('tamanio') ?? $producto->tamanio ?? '' }}" step="0.01"><br>
+
+        <label for="imagen">Imagen:</label><br>
+        <input type="file" name="imagen" id="imagen" accept="image/*"><br>
 
         <input type="submit" value="Enviar">
 
