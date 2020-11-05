@@ -6,8 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{route('productos.edit',[$producto->id])}}">Editar Producto</a>
-
+    <a href="{{route('productos.edit',[$producto->id])}}">Editar Producto</a><br>
+    <a href="{{route('productos.index')}}">Listado de Producto</a><br>
+    <form action="{{ route('productos.destroy', [$producto]) }}" method="POST">
+        @method('DELETE')
+        @csrf
+        <button type="submit">Eliminar</button>
+    </form>
     <table>
         <tr>
             <th>ID</th>

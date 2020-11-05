@@ -77,7 +77,15 @@ class ProductosController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'precio' => 'required|min:0',
+        ]);
+        Producto::where('id', $producto->id)
+            ->update($request->except('_method', '_token'));
+
+        return redirect()->route('productos.show', [$producto]);
     }
 
     /**
@@ -88,6 +96,7 @@ class ProductosController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+        return redirect()->route("productos.index");
     }
 }

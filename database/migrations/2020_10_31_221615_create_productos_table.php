@@ -18,7 +18,7 @@ class CreateProductosTable extends Migration
             $table->string("nombre",32);
             $table->string("descripcion",64);
             $table->double("precio",5, 2);
-            $table->enum('tipo', ['pizza', 'complemento']);
+            $table->enum('tipo', ['Pizza', 'Complemento']);
             $table->string("tamanio", 20);
             $table->timestamps();
         });
