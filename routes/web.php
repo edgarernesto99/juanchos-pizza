@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\PersonaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,9 @@ Route::get('/', function () {
 });
 
 Route::resource('productos', ProductosController::class);
+
+Route::resource('personas', PersonaController::class);
+
+Route::get('/productos.html', function () {
+    return view('/Layouts/Productos');
+});
