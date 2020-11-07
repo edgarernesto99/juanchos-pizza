@@ -64,6 +64,9 @@
                     </div>
                 </li>
         </div>
+        <div class="flex-left boton">
+            <a href="productos/create" class="boton btn btn-primary">Crear Producto</a>
+        </div>
     </div>
 </div>
 @endsection

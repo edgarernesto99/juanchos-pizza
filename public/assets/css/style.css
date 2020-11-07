@@ -2440,4 +2440,84 @@ h3.hdg {
 }
 /*--//responsive-design---*/
 
+}
+}
 
+/*Clases personalizadas*/
+/*UTILIDADES*/
+.flex-left{
+    display: flex;
+    justify-content: flex-end;
+}
+.contenedor {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img.img-producto {
+    width: 100%;
+    border: 4px solid #FFF;
+    margin: 20px auto 0 auto;
+}
+/*indexproductos*/
+.boton {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+}
+/*Esto es para el metodo show de productos*/
+.contenido-producto {
+    margin-top: 20px;
+    padding: 10px;
+}
+.contenido-producto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: blue;
+}
+.contenido-producto p {
+    font-size: 25px;
+}
+.contenido-producto span {
+    font-weight: bold;
+}
+.contenido-producto .ordenar-producto {
+    margin-top: 20px;
+}
+/*Create productos*/
+.title-form {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/*Campos de formulario crear/efitar producto*/
+.formulario-producto {
+    padding: 0rem 5rem;
+}
+.formulario-producto .campo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+.formulario-producto .campo-check {
+    margin-bottom: 2rem;
+}
+.formulario-producto .campo label {
+    flex: 0 0 10rem;
+}
+.formulario-producto .campo input:not([type="submit"]),
+.formulario-producto textarea,
+.formulario-producto select {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+.formulario-producto .genero {
+    flex: 1;
+    padding: 1rem;
+}
+.formulario-producto .enviar {
+    display: flex;
+    justify-content: flex-end;
+}
