@@ -2521,3 +2521,8 @@ img.img-producto {
     display: flex;
     justify-content: flex-end;
 }
+
+/*PERSONAS*/
+.show-people{
+    padding-top: 5rem;
+}
