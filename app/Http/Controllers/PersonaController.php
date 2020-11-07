@@ -40,7 +40,7 @@ class PersonaController extends Controller
             'nombre' => 'required',
             'apellidos' => 'required',
             'correo' => 'required|email|unique:personas,correo,',
-            'telefono' => 'required'
+            'telefono' => 'required|numeric'
         ]);
         $persona = new Persona();
         $persona->nombre = $request->nombre;

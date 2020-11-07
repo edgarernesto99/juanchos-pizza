@@ -40,6 +40,7 @@ class ProductosController extends Controller
             'nombre' => 'required',
             'descripcion' => 'required',
             'precio' => 'required|min:0',
+            'tamanio' => 'required',
             'imagen' => 'required'
         ]);
         $producto = new Producto();
